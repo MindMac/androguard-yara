@@ -44,7 +44,7 @@ Androguard module is ready to use with Koodous reports, hence we provide an scri
 ```
 TOKEN = 'HERE'
 ```
-- Use the script:
+- Use the script with the sha256 of the sample that you refer, in this example is d8adb784d08a951ebacf2491442cf90d21c20192085e44d1cd22e2b6bdd4ef5f:
 ```Shell
 $ python download_androguard_report.py -s d8adb784d08a951ebacf2491442cf90d21c20192085e44d1cd22e2b6bdd4ef5f
 
