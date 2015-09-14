@@ -419,19 +419,19 @@ int module_load(
     size_t module_data_size)
 {
   /* Definitions */
-  YR_OBJECT* permission_obj;
-  YR_OBJECT* activity_obj;
-  YR_OBJECT* package_name_obj;
-  YR_OBJECT* main_activity_obj;
-  YR_OBJECT* appname_obj;
-  YR_OBJECT* certificate_obj;
-  YR_OBJECT* service_obj;
-  YR_OBJECT* url_obj;
-  struct permissions *permissions_struct;
+  YR_OBJECT* permission_obj = NULL;
+  YR_OBJECT* activity_obj = NULL;
+  YR_OBJECT* package_name_obj = NULL;
+  YR_OBJECT* main_activity_obj = NULL;
+  YR_OBJECT* appname_obj = NULL;
+  YR_OBJECT* certificate_obj = NULL;
+  YR_OBJECT* service_obj = NULL;
+  YR_OBJECT* url_obj = NULL;
+  struct permissions *permissions_struct = NULL;
 
   int version;
   json_error_t json_error;
-  const char* str_val;
+  const char* str_val = NULL;
   json_t* json;
 
   /* End definitions */
@@ -523,7 +523,8 @@ int module_unload(YR_OBJECT* module)
 
   //Free memory allocated in module load
   obj = get_object(module, "permission");
-  free(obj->data);
+  if (obj != NULL)
+    free(obj->data);
 
   return ERROR_SUCCESS;
 }
