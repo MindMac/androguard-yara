@@ -1,5 +1,5 @@
 #Androguard module for Yara
-This module for Yara is part of the Koodous project [https://koodous.com](https://koodous.com) and it integrates static APK analysis with Yara. Uou can use it to find APKs by package name, permissions or API level, etc. You can find the documentation for this module in the Koodous documentation's site: [http://docs.koodous.com/yara/androguard/](http://docs.koodous.com/yara/androguard/)
+This module for Yara is part of the Koodous project [https://koodous.com](https://koodous.com) and it integrates static APK analysis with Yara. You can use it to find APKs by package name, permissions or API level, etc. You can find the documentation for this module in the Koodous documentation's site: [http://docs.koodous.com/yara/androguard/](http://docs.koodous.com/yara/androguard/)
 
 ## Preparing compilation
 If you want to use this module, first you need to re-compile Yara with the androguard module. To do so, you need to modify some files. Follow the basic steps in the official docs:
